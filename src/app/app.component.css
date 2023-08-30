@@ -1,0 +1,28 @@
+span {
+  color: blue;
+  font-weight: bold;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.role {
+  font-weight: bold;
+  color: crimson;
+  background-color: gray;
+  width: 20%;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.bg-admin {
+  background-color: gold;
+}
+.bg-user {
+  background-color: green;
+}
+.bg-visitor {
+  background-color: white;
+}
+
+.title {
+  color: gold;
+}

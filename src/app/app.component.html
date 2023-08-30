@@ -1,0 +1,51 @@
+<div class="container">
+  <h1 class="text-center mt-2 title"> USER MANEGMENT APP</h1>
+  <div class="row mt-3">
+    <div class="col-4">
+      <input type="text" class="form-control" placeholder="name" [(ngModel)]="social.name">
+    </div>
+    <div class="col-4">
+      <input type="text" class="form-control" placeholder="role" [(ngModel)]="social.role">
+    </div>
+    <div class="col-4">
+      <input type="text" class="form-control" placeholder="imageurl" [(ngModel)]="social.imageurl">
+    </div>
+  </div>
+  <div class="row mt-2">
+    <div class="col-4">
+      <input type="text" class="form-control" placeholder="telephone" [(ngModel)]="social.tel">
+    </div>
+    <div class="col-4">
+      <input type="text" class="form-control" placeholder="email adresse" [(ngModel)]="social.email">
+    </div>
+    <div class="col-4">
+      <button class="btn btn-primary form-control" (click)="ajout()"> create</button>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="row mt-3">
+    <div class="col-3" *ngFor="let item of socials">
+      <div [ngClass]="{'card m-1' : true ,
+        'bg-admin' : item.role == 'admin',
+        'bg-user' : item.role == 'user' ,
+        'bg-visitor' : item.role == 'visitor'}">
+        <div class="card-image p-1">
+          <img [src]="item.imageurl" class=" w-100" alt="">
+        </div>
+        <div class="card-body">
+          <h1> {{item.name}} </h1>
+          <p class="role"> {{item.role}} </p>
+          <div>
+            <p> <span>NUM-TEL : </span> {{item.tel}} </p>
+            <p> <span> EMAIL : </span> {{item.email}} </p>
+          </div>
+        </div>
+        <div class="card-footer">
+          <button class="btn btn-danger" (click)="delete()">delete</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
